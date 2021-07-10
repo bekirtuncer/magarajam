@@ -51,8 +51,8 @@ public class Player : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            
-            Input.mousePosition()
+
+            //Input.mousePosition();
 
         }
 
