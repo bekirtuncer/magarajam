@@ -5,11 +5,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public GameObject hamknocksib;
+    public GameObject needleexample;
 
     public float speed;
 
+    public GameObject needlePrefab;
 
+    public int positiveScore;
+    public int negativeScore;
+
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -23,13 +28,25 @@ public class Player : MonoBehaviour
         movementPlayer();
 
 
-
+        HamKnock();
 
 
 
 
     }
 
+
+    public void scoreUp()
+    {
+        positiveScore += 1;
+
+    }
+
+    public void scoreDown()
+    {
+        negativeScore -= 1;
+
+    }
 
     //Player Movement Up down right left
     public void movementPlayer()
@@ -49,10 +66,17 @@ public class Player : MonoBehaviour
 
     public void HamKnock()
     {
+
+
+
         if(Input.GetMouseButtonDown(0))
         {
+
+            GameObject go = GameObject.Instantiate(needlePrefab);
+            go.transform.rotation = needleexample.transform.rotation;
+            go.transform.position = needleexample.transform.position;
             
-            Input.mousePosition()
+
 
         }
 

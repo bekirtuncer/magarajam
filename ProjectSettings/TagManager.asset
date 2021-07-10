@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Innocent
   - Needle
+  - Enemy
   layers:
   - Default
   - TransparentFX
