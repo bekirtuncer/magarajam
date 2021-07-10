@@ -14,7 +14,12 @@ public class Player : MonoBehaviour
     public int positiveScore;
     public int negativeScore;
 
-    
+
+    public int needleCounter = 10;
+
+    public float clock4fireRate =0.0f ;
+    public float time4fireRate = 0.2f;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -28,7 +33,7 @@ public class Player : MonoBehaviour
         movementPlayer();
 
 
-        HamKnock();
+        throwNeedle();
 
 
 
@@ -48,6 +53,19 @@ public class Player : MonoBehaviour
 
     }
 
+
+    public void needleCountUp()
+    {
+        needleCounter += 1;
+
+    }
+
+    //needle sayisi azaliyor sahip olunan
+    public  void needleCountDown()
+    {
+        needleCounter -= 1;
+    }
+
     //Player Movement Up down right left
     public void movementPlayer()
     {
@@ -64,6 +82,50 @@ public class Player : MonoBehaviour
 
 
 
+    public void throwNeedle()
+    {
+        if (needleCount() & timeProcess4needlerate() )
+        {
+
+
+            HamKnock();
+
+        }
+    }
+
+    public bool timeProcess4needlerate()
+    {
+        clock4fireRate += Time.deltaTime;
+        if(clock4fireRate > time4fireRate)
+        {
+            
+
+            return true; 
+
+        }
+        else { return false; }
+        
+
+    }
+
+
+    public bool needleCount()
+    {
+        if(needleCounter>0)
+        {
+            
+            return true;
+             
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+
+    // asi atiyor ucabilecek
     public void HamKnock()
     {
 
@@ -72,15 +134,16 @@ public class Player : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
 
-<<<<<<< HEAD
+
             GameObject go = GameObject.Instantiate(needlePrefab);
             go.transform.rotation = needleexample.transform.rotation;
             go.transform.position = needleexample.transform.position;
-            
 
-=======
-            //Input.mousePosition();
->>>>>>> 71ccbd13afdffe3395063617bd10cd9de225c697
+            clock4fireRate = 0f;// ates ettikten sonra sifirlaniyor rate i
+
+            needleCountDown();
+
+
 
         }
 
