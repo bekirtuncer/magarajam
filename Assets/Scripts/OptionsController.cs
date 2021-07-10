@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class OptionsController : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
-    [SerializeField] float defaultVolume = 1f;
+    [SerializeField] float defaultVolume = 0.5f;
     
     // Start is called before the first frame update
     void Start()

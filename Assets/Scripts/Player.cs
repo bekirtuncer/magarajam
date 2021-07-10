@@ -139,6 +139,7 @@ public class Player : MonoBehaviour
             go.transform.rotation = needleexample.transform.rotation;
             go.transform.position = needleexample.transform.position;
 
+
             clock4fireRate = 0f;// ates ettikten sonra sifirlaniyor rate i
 
             needleCountDown();
