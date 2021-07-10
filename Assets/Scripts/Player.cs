@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
     public void movementPlayer()
     {
         Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Vector2 moveVelocity = playerInput * Time.deltaTime * speed; 
+        Vector2 moveVelocity = playerInput * speed; //* Time.deltaTime  //oyunu bozabilir baska pcde o yuzden kaldirdim
                 // Time.deltaTime eklenmese de olur amaa eklendigi zaman faydalari var gibi hissettim bunu arastiracagim
         
         GetComponent<Rigidbody2D>().velocity = moveVelocity;

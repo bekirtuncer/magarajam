@@ -17,19 +17,25 @@ public class Needle : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        
+        //GetComponent<Rigidbody2D>().velocity = transform.TransformVector(Vector3.up * speed);
+        //GetComponent<Rigidbody2D>().
     }
 
     // Update is called once per frame
     private void Update()
     {
         //bu buglu bunu daha sonra incele 
-       //  transform.Translate(transform.up * speed * Time.deltaTime);
+        //  transform.Translate(transform.up * speed * Time.deltaTime);
 
 
-
+        //bunu da kullaniyordum tam sektirme icin degisiklige gidiyorum
         transform.Translate( Vector3.up * speed * Time.deltaTime );
 
+        //GetComponent<Rigidbody2D>().velocity = Vector3.up * speed ;//* Time.deltaTime
+
+        //GetComponent<Rigidbody2D>().velocity = transform.TransformVector(Vector3.up * speed );
+
+        //GetComponent<Rigidbody2D>().velocity = transform.TransformVector(Vector3.up * speed);
 
         acces2Destroy();
 
@@ -54,8 +60,27 @@ public class Needle : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+/*
+        Debug.Log(GetComponent<Rigidbody2D>().velocity);
+        //GetComponent<Rigidbody2D>().velocity = new Vector3(-collision.relativeVelocity.x, -collision.relativeVelocity.y);// *speed;
+        Debug.Log(GetComponent<Rigidbody2D>().velocity); 
+        Debug.Log(collision.relativeVelocity.x);
+        Debug.Log(collision.relativeVelocity.y);
+            
+        //GetComponent<Rigidbody2D>().velocity *= 20;// transform.TransformVector(Vector3.up * speed);
 
-       if(collision.gameObject.tag == "Enemy")
+        //Bounds.
+
+        //GetComponent<Rigidbody2D>().AddRelativeForce(collision.relativeVelocity/20);
+        //GetComponent<Rigidbody2D>().AddForce();
+        //GetComponent<Rigidbody2D>().AddForceAtPosition()
+*/        
+
+        
+        
+
+
+        if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("enemy");
             player.GetComponent<Player>().scoreUp();
