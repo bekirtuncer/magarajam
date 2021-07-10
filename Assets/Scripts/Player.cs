@@ -72,15 +72,13 @@ public class Player : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
 
-<<<<<<< HEAD
+
             GameObject go = GameObject.Instantiate(needlePrefab);
             go.transform.rotation = needleexample.transform.rotation;
             go.transform.position = needleexample.transform.position;
             
 
-=======
-            //Input.mousePosition();
->>>>>>> 71ccbd13afdffe3395063617bd10cd9de225c697
+
 
         }
 
