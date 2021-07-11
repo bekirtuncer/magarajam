@@ -210,7 +210,7 @@ public class Needle : MonoBehaviour
             collision.gameObject.GetComponent<colorblind>().tag2InnocentfromEnemy();
             collision.gameObject.GetComponent<colorblind>().colorblind_off();
             player.GetComponent<Player>().scoreUp();
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
 
 

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class level1to2 : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -20,8 +20,9 @@ public class level1to2 : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            //ekran yukler
-        
+            print("sss");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+
         }
     }
 

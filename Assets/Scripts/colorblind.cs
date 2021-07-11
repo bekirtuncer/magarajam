@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class colorblind : MonoBehaviour
 {
@@ -14,12 +16,19 @@ public class colorblind : MonoBehaviour
 
     // Start is called before the first frame update
     private void Start()
-    {
-
+    { 
+        
         sibiling =GetComponentInChildren<SpriteRenderer>().gameObject;
 
 
-        colorblind_off();
+       if(!SceneManager.GetActiveScene().name.StartsWith("Introduction"))
+        {colorblind_off();
+
+        }
+
+       
+
+        
 
         Invoke("colorblind_on", 2.0f);
         // 2 . parametrede girdigimiz degersure kadar sonra 1. parameterede girdigim metodu calistiracak
