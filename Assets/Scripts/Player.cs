@@ -138,6 +138,8 @@ public class Player : MonoBehaviour
             GameObject go = GameObject.Instantiate(needlePrefab);
             go.transform.rotation = needleexample.transform.rotation;
             go.transform.position = needleexample.transform.position;
+            //go.gameObject.GetComponent<Needle>().cikisNoktasi = go.transform.position;// sekme icin gerekliydi gerke kalmadi 
+            go.gameObject.GetComponent<Needle>().directionDetermine();
 
 
             clock4fireRate = 0f;// ates ettikten sonra sifirlaniyor rate i
