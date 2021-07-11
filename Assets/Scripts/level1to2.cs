@@ -15,14 +15,17 @@ public class level1to2 : MonoBehaviour
     {
         
     }
-
-    private void OnCollisionEnter(Collision collision)
+     
+    
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             print("sss");
+            if(!GameObject.FindGameObjectWithTag("Enemy"))
+            { 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-
+                }
         }
     }
 

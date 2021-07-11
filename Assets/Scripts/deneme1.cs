@@ -15,10 +15,10 @@ public class deneme1 : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(SceneManager.GetActiveScene().name == "Level 1")
-        {
+       // if(SceneManager.GetActiveScene().name == "Level 1"){}
+        
 
-        }
+        
         
     }
 
