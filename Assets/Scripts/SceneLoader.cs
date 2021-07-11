@@ -25,4 +25,10 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
 }
