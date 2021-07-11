@@ -238,7 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acces4Destroy: 0
   clock4Destory: 0
-  time4Destory: 5
+  time4Destory: 1
   speed: 15
   direction: {x: 0, y: 0, z: 0}
 --- !u!61 &2212301231615538441

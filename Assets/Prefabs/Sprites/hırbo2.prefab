@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8802108988397817747}
   - component: {fileID: 5507392229746346175}
+  - component: {fileID: -1031310957807601664}
   m_Layer: 0
   m_Name: "h\u0131rbo2"
-  m_TagString: Untagged
+  m_TagString: Innocent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +59,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7208917, y: 1.302367}
   m_EdgeRadius: 0
+--- !u!114 &-1031310957807601664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900996464536684751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568076674791bf24781685247d594c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sibiling: {fileID: 0}
+  spritemain: {fileID: 0}
+  spriteBlind: {fileID: 0}
+  spriteAgainst: {fileID: 0}
 --- !u!1 &8420453593354971634
 GameObject:
   m_ObjectHideFlags: 0

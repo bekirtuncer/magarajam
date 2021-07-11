@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    public GameObject playersib;
+
+
     public GameObject dynamicArmNeeded;
     public float dynamicdistance2move=0.2f;
     private float dynamic2back=0f;
@@ -25,6 +28,10 @@ public class Player : MonoBehaviour
 
     public float clock4fireRate =0.0f ;
     public float time4fireRate = 0.2f;
+
+
+    private Vector2 moveVelocity;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -80,6 +87,7 @@ public class Player : MonoBehaviour
                 // Time.deltaTime eklenmese de olur amaa eklendigi zaman faydalari var gibi hissettim bunu arastiracagim
         
         GetComponent<Rigidbody2D>().velocity = moveVelocity;
+        animationUponMovement();
 
         //transform.Translate(moveVelocity);
 
@@ -87,6 +95,26 @@ public class Player : MonoBehaviour
     }
 
 
+    public void animationUponMovement()
+    {
+        playersib.GetComponent<Animator>().SetInteger("DA", (int)Input.GetAxisRaw("Horizontal"));//setfloat ile animatordaki DA degerini belirliyorum 
+        //moveVelocity[0];
+        if((int)Input.GetAxisRaw("Horizontal") < 0)
+        {
+            playersib.GetComponent<SpriteRenderer>().flipX = true;
+            
+
+        }
+        else if ((int)Input.GetAxisRaw("Horizontal") > 0)
+            {
+            playersib.GetComponent<SpriteRenderer>().flipX = false;
+
+        }
+
+
+        playersib.GetComponent<Animator>().SetInteger("WS", (int)Input.GetAxisRaw("Vertical"));
+
+    }
 
     public void throwNeedle()
     {

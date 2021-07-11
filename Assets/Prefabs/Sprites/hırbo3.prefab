@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 529860305779298863}
   - component: {fileID: 6043777352000923722}
+  - component: {fileID: -8187517443035600554}
   m_Layer: 0
   m_Name: "h\u0131rbo3"
-  m_TagString: Untagged
+  m_TagString: Innocent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092919303840972317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.62, y: 1.6, z: -28.865862}
+  m_LocalPosition: {x: 6.62, y: 1.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8393502033710797276}
@@ -58,6 +59,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67437387, y: 1.3256264}
   m_EdgeRadius: 0
+--- !u!114 &-8187517443035600554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092919303840972317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568076674791bf24781685247d594c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sibiling: {fileID: 0}
+  spritemain: {fileID: 0}
+  spriteBlind: {fileID: 0}
+  spriteAgainst: {fileID: 0}
 --- !u!1 &2564646938136937978
 GameObject:
   m_ObjectHideFlags: 0

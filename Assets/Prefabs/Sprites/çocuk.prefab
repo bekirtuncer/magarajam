@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8884348051306268761}
   - component: {fileID: 122073405681735027}
+  - component: {fileID: -6573166404241218171}
   m_Layer: 0
   m_Name: "\xE7ocuk"
-  m_TagString: Untagged
+  m_TagString: Innocent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807875905755534572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: -4.75, z: -30.519983}
+  m_LocalPosition: {x: 10.5, y: -4.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6090098315639907016}
@@ -58,6 +59,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82160175, y: 1.3430735}
   m_EdgeRadius: 0
+--- !u!114 &-6573166404241218171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807875905755534572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568076674791bf24781685247d594c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sibiling: {fileID: 0}
+  spritemain: {fileID: 0}
+  spriteBlind: {fileID: 0}
+  spriteAgainst: {fileID: 0}
 --- !u!1 &4150565815482125172
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7716498504204367078}
   - component: {fileID: 4862768572727725628}
+  - component: {fileID: -4342078185230673183}
   m_Layer: 0
   m_Name: ninja
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +59,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8719468, y: 1.3841594}
   m_EdgeRadius: 0
+--- !u!114 &-4342078185230673183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523695698938498008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 568076674791bf24781685247d594c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sibiling: {fileID: 0}
+  spritemain: {fileID: 0}
+  spriteBlind: {fileID: 0}
+  spriteAgainst: {fileID: 0}
 --- !u!1 &7278680650797695294
 GameObject:
   m_ObjectHideFlags: 0

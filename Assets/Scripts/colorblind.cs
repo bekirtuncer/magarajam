@@ -16,14 +16,23 @@ public class colorblind : MonoBehaviour
     private void Start()
     {
 
+        sibiling =GetComponentInChildren<SpriteRenderer>().gameObject;
 
-        
+
+        colorblind_off();
+
+        Invoke("colorblind_on", 2.0f);
+        // 2 . parametrede girdigimiz degersure kadar sonra 1. parameterede girdigim metodu calistiracak
+        //1. parametredeki tirnak arasina yaziliyor evet
+
     }
 
     // Update is called once per frame
     private void Update()
     {
 
+
+        /*
         if(Input.GetKeyDown(KeyCode.K))
         {
             colorblind_on();
@@ -34,7 +43,7 @@ public class colorblind : MonoBehaviour
             colorblind_off();
 
         }
-
+        */
 
         
     }
@@ -44,10 +53,10 @@ public class colorblind : MonoBehaviour
     public void colorblind_on()
     {
 
-        sibiling.GetComponent<SpriteRenderer>().sprite = spriteBlind;
+        //sibiling.GetComponent<SpriteRenderer>().sprite = spriteBlind;
         //
         //
-        //sibiling.GetComponent<SpriteRenderer>().color = new Color(255,255,255);
+        sibiling.GetComponent<SpriteRenderer>().color = new Color(255,255,255);
 
 
 
@@ -86,11 +95,11 @@ public class colorblind : MonoBehaviour
     public void colorblind_off()
     {
         
-        
-        sibiling.GetComponent<SpriteRenderer>().sprite = spritemain;
-
-
         /*
+        sibiling.GetComponent<SpriteRenderer>().sprite = spritemain;
+            */
+
+        
         if(gameObject.tag=="Enemy")
             {
             
@@ -101,12 +110,14 @@ public class colorblind : MonoBehaviour
         {
             sibiling.GetComponent<SpriteRenderer>().color = new Color(0, 255, 0);
         }
-        */
+        
 
 
 
 
     }
+
+    
 
 
 

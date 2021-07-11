@@ -7,6 +7,8 @@ TagManager:
   - Innocent
   - Needle
   - Enemy
+  - police
+  - koylu
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Needle : MonoBehaviour
 {
@@ -203,25 +204,28 @@ public class Needle : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<colorblind>().changeSide();
+            //collision.gameObject.GetComponent<colorblind>().changeSide();
             //collision.gameObject.tag = "Innocent";//tagi innocent oldu yani masum 
+            //collision.gameObject.GetComponent<colorblind>().tag2InnocentfromEnemy();
             collision.gameObject.GetComponent<colorblind>().tag2InnocentfromEnemy();
-            
-
+            collision.gameObject.GetComponent<colorblind>().colorblind_off();
             player.GetComponent<Player>().scoreUp();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
 
 
         else if (collision.gameObject.tag == "Innocent") 
         {
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);// ayni sceeni bir daha yukler
+            //player.GetComponent<Player>().scoreDown();
             
 
-            player.GetComponent<Player>().scoreDown();
-            Destroy(gameObject);
-
         }
+
+
+        
        else if(collision.gameObject.tag=="Player")
         {
 

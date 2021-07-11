@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 5f9c159a2a026c34e99957c55a0122f1
+guid: 65aa7171d09cbe2448f7c1f23bcfc826
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8857559377146596540
+    second: walkforward_0
+  - first:
+      213: 4017167558709283666
+    second: walkforward_1
+  - first:
+      213: 802441862569019578
+    second: walkforward_2
+  - first:
+      213: -4812675408180771364
+    second: walkforward_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,9 +53,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,7 +125,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: walkforward_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbcc0cbf25f5cea70800000000000000
+      internalID: 8857559377146596540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkforward_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b071c5c98dfb730800000000000000
+      internalID: 4017167558709283666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkforward_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8445b5f98d22b00800000000000000
+      internalID: 802441862569019578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walkforward_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd580240731f53db0800000000000000
+      internalID: -4812675408180771364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
