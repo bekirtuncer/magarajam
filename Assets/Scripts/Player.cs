@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
     public void movementPlayer()
     {
         Vector2 playerInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        Vector2 moveVelocity = playerInput * Time.deltaTime * speed; 
+        Vector2 moveVelocity = playerInput * speed; //* Time.deltaTime  //oyunu bozabilir baska pcde o yuzden kaldirdim
                 // Time.deltaTime eklenmese de olur amaa eklendigi zaman faydalari var gibi hissettim bunu arastiracagim
         
         GetComponent<Rigidbody2D>().velocity = moveVelocity;
@@ -138,6 +138,8 @@ public class Player : MonoBehaviour
             GameObject go = GameObject.Instantiate(needlePrefab);
             go.transform.rotation = needleexample.transform.rotation;
             go.transform.position = needleexample.transform.position;
+            //go.gameObject.GetComponent<Needle>().cikisNoktasi = go.transform.position;// sekme icin gerekliydi gerke kalmadi 
+            go.gameObject.GetComponent<Needle>().directionDetermine();
 
 
             clock4fireRate = 0f;// ates ettikten sonra sifirlaniyor rate i
