@@ -74,6 +74,7 @@ MonoBehaviour:
   sibiling: {fileID: 2439063017008474427}
   spritemain: {fileID: 21300000, guid: d5edfd23c12794c4992baa858061f15d, type: 3}
   spriteBlind: {fileID: 21300000, guid: be64780b828340140b9431690e40ebb9, type: 3}
+  spriteAgainst: {fileID: 21300000, guid: a3266de4a6733a94a80e29b2ba9adf48, type: 3}
 --- !u!1 &2439063017008474427
 GameObject:
   m_ObjectHideFlags: 0

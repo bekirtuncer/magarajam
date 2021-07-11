@@ -203,7 +203,11 @@ public class Needle : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("enemy");
+            collision.gameObject.GetComponent<colorblind>().changeSide();
+            //collision.gameObject.tag = "Innocent";//tagi innocent oldu yani masum 
+            collision.gameObject.GetComponent<colorblind>().tag2InnocentfromEnemy();
+            
+
             player.GetComponent<Player>().scoreUp();
             Destroy(gameObject);
         }
@@ -212,7 +216,7 @@ public class Needle : MonoBehaviour
 
         else if (collision.gameObject.tag == "Innocent") 
         {
-            Debug.Log("innocent");
+            
 
             player.GetComponent<Player>().scoreDown();
             Destroy(gameObject);

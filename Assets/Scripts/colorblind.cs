@@ -10,6 +10,8 @@ public class colorblind : MonoBehaviour
     public Sprite spritemain;
     public Sprite spriteBlind;
 
+    public Sprite spriteAgainst;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -51,6 +53,33 @@ public class colorblind : MonoBehaviour
 
     }
 
+    public void changeSide()
+    {
+        sibiling.GetComponent<SpriteRenderer>().sprite = spriteAgainst;
+        spritemain = spriteAgainst;
+
+    }
+
+    public void tag2InnocentfromEnemy()
+    {
+        gameObject.tag = "Innocent";
+
+    }
+
+    public void tag2EnemyfromInnocent()
+    {
+        gameObject.tag = "Enemy";
+    }
+    public void tagchance()
+    {
+        if(gameObject.tag=="Enemy")
+        { tag2InnocentfromEnemy(); }
+
+        else
+        {
+            tag2EnemyfromInnocent();
+        }
+    }
 
 
     //colorblind modunu kapatir

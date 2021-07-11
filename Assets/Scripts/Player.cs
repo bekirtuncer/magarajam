@@ -5,6 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
+    public GameObject dynamicArmNeeded;
+    public float dynamicdistance2move=0.2f;
+    private float dynamic2back=0f;
+
+    public GameObject venom;
+
     public GameObject needleexample;
 
     public float speed;
@@ -98,7 +104,9 @@ public class Player : MonoBehaviour
         clock4fireRate += Time.deltaTime;
         if(clock4fireRate > time4fireRate)
         {
-            
+
+            dynamic2whole(-dynamic2back);
+
 
             return true; 
 
@@ -147,6 +155,9 @@ public class Player : MonoBehaviour
             needleCountDown();
 
 
+            //buraya ates edince his gelmesi eklenecek 
+
+            effectrecoil();
 
         }
 
@@ -161,11 +172,37 @@ public class Player : MonoBehaviour
 
 
 
+    // atistan sonraki efektler
+    public void effectrecoil()
+    {
+        //particle system ile zehir dagiliyor biraz
+        venom.GetComponent<ParticleSystem>().Play();
+
+
+        //ileri gidecek dynamicArmNeedeed (example needle ve kollar)
+        dynamic2whole(dynamicdistance2move);
+        //!!!!!!!!!
 
 
 
 
+    }
 
+
+
+    public void dynamic2whole(float distance)
+    {
+        
+        dynamicArmNeeded.transform.Translate(Vector3.up * distance);
+       
+        if (distance<0)
+        {
+            dynamic2back = 0;
+
+        }
+        else { dynamic2back = distance; }
+        
+    }
 
 
 
